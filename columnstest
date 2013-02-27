@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- DEFAULT COLORS -->
+        <meta name="color:Text" content="#000"/>
+        <meta name="color:Highlight Color" content="#e73839"/>
+        <meta name="color:Post Labels" content="#FFFFEA"/>
+        
+        <!-- END DEFAULT COLORS -->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+        <link rel="icon" href="{Favicon}"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+        
+        <!-- iPhone -->
+        <meta name="viewport" content="width=920"/>
+        <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
+
+        <style type="text/css">
+            body {
+                text-align: center;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: #fff;
+                color: {color:Text};
+                a:link: {Highlight Color};
+            }
+            
+    #container{
+    width:980px;
+    margin:auto;
+    }
+   
+    #index-bar{border-top:2px solid {color:Borders};padding-bottom:25px;}
+    
+
+            #header {
+                margin-top: 10px;
+                margin-left: 20px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                padding: 0;
+                width: 160px;
+                float:left;
+                background: #fff;
+                border: 0px solid #ddd;
+            }
+
+            #header a, #header a:active {
+                outline: 0;
+            }
+
+                #header h1 {
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 4em;
+                    font-weight: bold;
+                    text-align: left;
+                    margin: 0px 0px 0px 5px;
+                    padding: 10px 10px 10px 0px;
+                    color: #151515;
+                    display: block;
+                    letter-spacing: -.08em;
+                }
+
+                #header ul {
+                    list-style-type: none;
+                    display: block;
+                    margin: 0px 0px 0px 10px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    text-align: left;
+                  /*
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                  */
+                }
+
+                    #header ul li {
+                        display: block;
+                    }
+
+                        #header ul li a {
+                            font-family: Helvetica, Arial, sans-serif;
+                            font-size: 12px;
+                            color: #444;
+                            background-color: #fff;
+                            border: 0px solid #ddd;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            padding-left: 2%;
+                            padding-right: 2%; 
+                            text-decoration: none;
+                            font-weight: normal;
+                            text-transform: lowercase;
+                            line-height: 20px;
+                        }
+
+                            #header ul li a:hover {
+                                border-color: #ccc;
+                            }
+
+                #content {
+                text-align: left;
+                font-family: Helvetica, Arial, sans-serif;
+                margin: 10px 0px 0px 0px;
+                width: 720px;
+                float:left;
+                background: #fff;
+                border: 0px solid #ddd;
+            }
+                
+                #content a, #header a:active {
+                outline: 0;
+                color: "{Highlight Color}"
+            }
+                #content ul {
+                    list-style-type: none;
+                    display: block;
+                    margin: 0px 0px 0px -30px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    text-align: left;
+            }
+                
+                #content ul li {
+                display: block;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                color: #444;
+                background-color: #fff;
+                border: 0px solid #ddd;
+                padding-top: 0px;     
+                padding-bottom: 0px;
+                padding-left: 0%;
+                padding-right: 0%; 
+                text-decoration: none;
+                font-weight: normal;
+                line-height: 20px;
+            }
+
+                #content ul li a {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                color: #e73839;
+                background-color: #fff;
+                border: 0px solid #ddd;
+                padding-top: 0px;     
+                padding-bottom: 0px;
+                padding-left: 0%;
+                padding-right: 0%; 
+                text-decoration: none;
+                font-weight: normal;
+                line-height: 20px;
+            }
+                #content h2 {
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    text-align: left;
+                    margin: 0px 0px 0px 5px;
+                    padding: 10px 10px 10px 0px;
+                    color: #151515;
+                    display: block;
+                    letter-spacing: -.08em;
+               }
+                #content h3 {
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 1em;
+                    font-weight: normal;
+                    text-align: left;
+                    margin: 0px 0px 0px 5px;
+                    padding: 10px 10px 10px 0px;
+                    color: #333333;
+                    display: block;
+                    letter-spacing: -.08em;
+                }
+
+                #content h4 {
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 1em;
+                    font-weight: normal;
+                    text-align: left;
+                    margin: 0px 0px 0px 5px;
+                    padding: 10px 10px 10px 0px;
+                    color: #e73839;
+                    display: block;
+                    letter-spacing: -.08em;
+                }
+            
+                #content .column {
+                text-align: left;
+                margin: 0px 10px 0px 0px;
+                float:left;
+                background: #fff;
+                border: 0px solid #ddd;
+            }
+
+                #content .column ul {
+                    list-style-type: none;
+                    display: block;
+                    margin: 0px 0px 0px -30px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    text-align: left;
+            }
+                
+                #content .column ul li {
+                display: block;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                color: #444;
+                background-color: #fff;
+                border: 0px solid #ddd;
+                padding-top: 0px;     
+                padding-bottom: 0px;
+                padding-left: 0%;
+                padding-right: 0%; 
+                text-decoration: none;
+                font-weight: normal;
+                line-height: 20px;
+            }
+
+                #content .column ul li a {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                color: #e73839;
+                background-color: #fff;
+                border: 0px solid #ddd;
+                padding-top: 0px;     
+                padding-bottom: 0px;
+                padding-left: 0%;
+                padding-right: 0%; 
+                text-decoration: none;
+                font-weight: normal;
+                line-height: 20px;
+            }
+            
+    #pages{list-style:none;
+    margin:0px 0px;
+    border-top:0px solid {color:};
+      padding:0px;}
+    #pages li{
+    }
+ 
+    #pages a{
+    padding:0px 0px;
+    text-decoration:none;
+    border-bottom:0px solid {color:};
+    display:block;
+    }
+
+    .seperator{
+        margin: 0px; 
+        width:50%; 
+        border-bottom: 1px dotted #ddd;
+    }
+    
+    .clear{
+    clear:both;
+    }
+
+                
+            span.noborder a {
+                border: none !important;
+            }
+
+            .post-header {
+                font: Normal 11px Helvetica;
+                color: #444;
+                padding: 10px 10px 3px 10px;
+                background-color: #fff;
+                border-bottom: 1px dotted #ddd;
+                margin-bottom: 10px;
+            }
+
+            .post-header a, .post-header a:active {
+                color: #222;
+                outline: 0;
+                text-decoration: none;
+            }
+            
+            div.text,
+            div.photo,
+            div.link,
+            div.video,
+            div.audio,
+            div.conversation,
+            div.quote {
+                padding: 10px 0px 0px 10px;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+                font-family: Helvetica, Arial, sans-serif;
+                position: relative;
+                min-height: 160px;
+                line-height: 1.4em;
+            }
+
+                div.text a,
+                div.photo a,
+                div.link a,
+                div.video a,
+                div.audio a,
+                div.conversation a,
+                div.quote a {
+                    text-decoration: none;
+                    border-bottom-width: 1px;
+                    border-bottom-style: dotted;
+                    border-bottom-color: {color:Highlight Color};
+                    color: {color:Highlight Color};
+                }
+                
+                    div.text a:hover,
+                    div.photo a:hover,
+                    div.link a:hover,
+                    div.video a:hover,
+                    div.audio a:hover,
+                    div.conversation a:hover,
+                    div.quote a:hover {
+                        color: {color:Text};
+                        text-decoration: none;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-bottom-color: {color:Highlight Color};
+                    }
+                    
+            div.text h2 {
+                text-align: left;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+                font-size: 160%;
+                font-style: normal;
+                font-family: Helvetica, Arial, sans-serif;
+                color: {color:Text};
+                font-weight: normal;
+                letter-spacing: -.67px;
+            }
+            
+                div.link h2 a {
+                    text-align: left;
+                    padding: 0px 0px 0px 0px;
+                    margin-top: 20px;
+                    font-size: 100%;
+                    font-style: normal;
+                    font-family: Helvetica, Arial, sans-serif;
+                    color: {color:Text};
+                    font-weight: normal;
+                    letter-spacing: -.67px;
+                    text-decoration: underline;
+                    border: none;
+                }
+
+                div.link h2 a:hover {
+                    text-decoration: underline;
+                    border: none;
+                }
+                    
+            div.photo a img {
+                padding: 1px;
+                border: 1px solid #FFFFFF;
+                background-color: #333333;
+            }
+            
+                div.photo a img:hover {
+                    border: 1px solid #333333;
+                    background-color: #FFFFFF;
+                }
+
+            div.text ol, div.text ul {
+                margin: 10px 0px 0px 0px;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 0.8em;
+                text-align: justify;
+            }
+
+            div.text blockquote,
+            div.photo blockquote,
+            div.link blockquote,
+            div.quote blockquote,
+            div.audio blockquote,
+            div.video blockquote {
+                font-style: italic;
+                text-align: justify;
+            }
+            
+            div.quote h3 {
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                font-style: italic;
+            }
+            
+            div.quote h3.long {
+                font-size: 120%;
+            }
+        
+            div.quote h3.medium {
+                font-size: 120%;
+                line-height: 100%;
+            }
+        
+            div.quote h3.short {
+                font-size: 130%;
+                line-height: 100%;
+            }
+        
+            div.conversation h2 {
+                text-align: left;
+                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                font-size: 150%;
+                font-style: normal;
+                font-family: Helvetica, Arial, sans-serif;
+                color: {color:Text};
+                font-weight: normal;
+                font-variant: small-caps;
+                letter-spacing: 0.1em;
+                text-transform: capitalize;
+            }
+            
+            div.conversation ul {
+                font-size: 1em;
+                list-style-type: none;
+            }
+            
+            div.conversation li {
+                text-align: left;
+            }
+            
+                div.conversation li span.label {
+                    font-weight: bold;
+                }
+                
+            img.sx {
+                float: left;
+                margin-right: 5px;
+            }
+        
+            div.navigation span {
+                margin: 0px 0px 0px 335px;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 0.6em;
+                text-align: center;
+            }
+            
+            div.navigation p span a {
+                padding: 5px;
+                background-color: {color:Highlight Color};
+                color: #FFFFFF;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            
+                div.navigation p span a:hover {
+                    background-color: {color:Text};
+                }
+                
+           #footer {
+                text-align: left;
+                padding-top: 5px;
+                border-top-width: 2px;
+                border-top-style: solid;
+                border-top-color: #000;
+                font: Normal 10px/1em Helvetica, Arial, sans-serif;
+                font-color: "e73839"
+                margin: 20px 20px;
+                margin-left: 0px;
+            }
+                
+                #footer a {
+                    color: "#e73839";
+                    text-decoration: none;
+            }
+                #footer ul {
+                    list-style-type: none;
+                    display: inline;
+                    float: left;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    text-align: left;
+                  /*
+                    border-top: 1px solid #ccc;
+                    border-bottom: 0px solid #ccc;
+                  */
+            }
+
+                #footer ul li {
+                        display: inline;
+            }
+
+                #footer ul li a {
+                            font-family: Helvetica, Arial, sans-serif;
+                            color: #e73839;
+                            background-color: #fff;
+                            border: 0px solid #ddd;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            padding-left: 1%;
+                            padding-right: 1%; 
+                            text-decoration: none;
+                            font-weight: normal;
+                            text-transform: lowercase;
+                            line-height: 20px;
+            }
+
+                #footer ul li a:hover {
+                                border-color: #ccc;
+                            }
+
+            ol.notes {
+                padding: 0px;
+                margin: 25px 0px;
+                list-style-type: none;
+                font-size: .75em;
+                background-color: #eee;
+                border: 1px solid #ddd;
+                color: #444;
+            }
+
+            ol.notes li.note {
+                padding: 3px 7px 3px 7px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            ol.notes li.note a {
+                color: #222;
+                text-decoration: none;
+            }
+
+            ol.notes li.note img.avatar {
+                vertical-align: -4px;
+                margin-right: 10px;
+                width: 16px;
+                height: 16px;
+            }
+
+            ol.notes li.note a img.avatar {
+                border: none;
+            }
+
+            ol.notes li.note span.action {
+                font-weight: normal;
+            }
+
+            ol.notes li.note .answer_content {
+                font-weight: normal;
+            }
+
+            ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 25px;
+            }
+
+            ol.notes li.note blockquote a {
+                text-decoration: none;
+            }
+
+            
+    				.query { font-weight: bold; }
+
+            {CustomCSS}
+        </style>
+    </head>
+    <body>
+    <div id="container">
+        <!-- Header -->
+        <div id="header">
+        <div id="index-bar"></div>
+            <h1>{Title}</h1>      
+            
+        <ul id="pages">
+        <li><a href="/">Home</a></li>
+        {block:HasPages}
+        {block:Pages}<li><a href="{URL}">{Label}</a></li>
+        {/block:Pages}
+        {/block:HasPages}
+            <li><a href="/archive">Archive</a></li>
+            <br>
+            <li><a href="mailto:sasha.vitelli@gmail.com">email</a></li>
+            <li><a href="http://couleursprimaires.tumblr.com">tumblr feed</a></li>
+        <li><a href="http://www.linkedin.com/in/sashavitelli">linkedin</a></li>
+        <li><a href="http://www.imdb.com/name/nm2313159">imdb</a></li>
+        <li><a href="https://vimeo.com/vitelli">vimeo</a></li>
+        <li><a href="http://stickny.tumblr.com">stick.ny</a></li>
+		</ul>
+            </div>
+
+        <!-- Content -->
+        <div id="content">
+        <div id="index-bar"></div>
+	  	  <h2>selected film, tv, and commercial credits and highlights</h2>
+        <h4>recent work/highlights only.  contact me for a full resume.</h4>
+         {block:SearchPage}
+						<div id="searchresultcount">
+							<p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+                        </div>
+						{/block:SearchPage}
+
+        <div id="posts" class="autopagerize_page_element">
+            
+            <!-- Post -->
+            {block:Posts}
+
+<h3>script supervisor</h3>
+  <div class="column">
+   <div style="width: 180px">
+    <ul id="column">
+    <li>"frances ha"</li>
+    <li>"the odd way home"</li>
+    <li>"jug face"</li>
+    <li>"verizon nokia lumia 822"</li>
+    <li>"verizon htc windows phone 8"</li>
+    <li>"hgtv tips around the home"</li>
+    <li>"the buffalo kid"</li>
+    <li>"tech up"</li>
+<li>&nbsp</li>
+    <li>"captain blackout"</li>
+    <li>"white check"</li>
+    <li>"quality controlled"</li>
+    </ul>
+    </div>
+    </div>
+  <div class="column">
+   <div style="width: 100px">
+    <ul id="column">
+    <li>narrative feature</li>
+    <li>narrative feature</li>
+    <li>narrative feature</li>
+    <li>commercial</li>
+    <li>commercial</li>
+    <li>commercial</li>
+    <li>narrative short</li>
+    <li>web series</li>
+<li>&nbsp</li>
+    <li>tv pilot</li>
+    <li>commercial</li>
+    <li>narrative short</li>
+    </ul>
+  </div>
+  </div>
+  <div class="column">
+ <div style="width: 215px">
+    <ul id="column">
+    <li>directed by Noah Baumbach</li>
+    <li>directed by Rajeev Nirmalakhandan</li>
+    <li>directed by Chad Crawford Kinkle</li>
+    <li>produced for Verizon</li>
+    <li>produced for Verizon</li>
+    <li>produced for HGTV and SC Johnson</li>
+    <li>directed by Pedro Marnoto Pereira</li>
+    <li>directed by Charles Rogers for Subway</li>
+    <li>directed by Matthew Panepinto</li>
+    <li>produced for General Mills</li>
+    <li>directed by William Thompson</li>
+    </ul>
+  </div>
+  </div>
+  <div class="column">
+  <div style="width: 180px">
+    <ul id="column">
+    <li>read about it <a href="http://tmagazine.blogs.nytimes.com/2012/09/27/noah-and-greta-make-a-movie">here</a> and <a href="http://www.variety.com/review/VE1117948153">here</a></li>
+    <li>read about it <a href="http://www.variety.com/article/VR1118056381">here</a></li>
+    <li>watch the trailer <a href="http://blogs.indiewire.com/theplaylist/exclusive-eerie-surreal-trailer-for-slamdance-entry-jug-face-starring-sean-young-20130115">here</a></li>
+    <li>&nbsp</li>
+    <li>&nbsp</li>
+    <li>&nbsp</li>
+    <li>&nbsp</li>
+    <li>watch it <a href="http://www.ifc.com/sxsw/subway/tech-up">here</a></li>
+    <li>&nbsp</li>
+    <li>&nbsp</li>
+    <li>&nbsp</li>
+  </ul>
+  </div>
+  </div>
+<br>
+ <div class="clear"></div>
+<h3>producer and associate producer</h3>
+  <div class="column">
+ <div style="width: 180px">
+    <ul id="column">
+    <li>"kinderblock 66"</li>
+    <li>"bombshell"</li>
+    <li>"the carpenter"</li>
+    </ul>
+    </div>
+</div>
+  <div class="column">
+ <div style="width: 100px">
+    <ul id="column">
+    <li>doc feature</li>
+    <li>narrative short</li>
+    <li>narrative short</li>
+    </ul>
+  </div>
+</div>
+  <div class="column">
+ <div style="width: 215px">
+    <ul id="column">
+    <li>directed by Rob Cohen</li>
+    <li>directed by Erin Sanger</li>
+    <li>directed by Erin Sanger</li>
+    </ul>
+</div>
+  </div>
+  <div class="column">
+ <div style="width: 180px">
+    <ul id="column">
+    <li>read about it <a href="http://www.kinderblock66thefilm.com">here</a></li>
+    <li>watch it <a href="http://www.bombshellthefilm.com">here</a> and <a href="http://bust.com/blog/intern-kelsie/put-your-money-where-your-mouth-is-5-female-backed-projects-worth-your-support.html">here</a></li>
+  </ul>
+</div>
+</div>
+
+<br>
+ <div class="clear"></div>
+<h3>other production highlights</h3>
+  <div class="column">
+ <div style="width: 180px">
+    <ul id="column">
+    <li>"chip"</li>
+    <li>"the chew"</li>
+    <li>"sodus point, ny, earth"</li>
+    <li>"mei-lynn's world"</li>
+    <li>"makin' it big"</li>
+    <li>"the approval matrix"</li>
+    </ul>
+    </div>
+</div>
+  <div class="column">
+ <div style="width: 100px">
+    <ul id="column">
+    <li>narrative short</li>
+    <li>commercial/teaser</li>
+    <li>narrative short</li>
+    <li>tv pilot</li>
+    <li>tv pilot</li>
+    <li>tv pilot</li>
+    </ul>
+  </div>
+</div>
+  <div class="column">
+ <div style="width: 215px">
+    <ul id="column">
+    <li>directed by Arthur Tabuteau</li>
+    <li>produced for ABC</li>
+    <li>directed by Melissa Kyle</li>
+    <li>directed by P. Chou/J. Brancaccio</li>
+    <li>produced for truTV</li>
+    <li>produced for Bravo</li>
+    </ul>
+</div>
+</div>
+
+<hr width="700" style="border: 1px dotted #ddd">
+
+<div class="clear"></div>
+<h3>skills</h3>
+<ul id="column">
+    <li>+ intermediate french proficiency</li>
+    <li>+ valid driver's license and passport</li>
+    <li>+ knowledgeable in:</li>
+    <li>&nbsp&nbsp&nbsp&nbsp&nbspfinal cut pro studio</li>
+    <li>&nbsp&nbsp&nbsp&nbsp&nbspadobe creative suite (including after effects and indesign)</li>
+    <li>&nbsp&nbsp&nbsp&nbsp&nbspceltx and final draft</li>
+    <li>&nbsp&nbsp&nbsp&nbsp&nbspmicrosoft office suite</li>
+    <li>+ press junket experience</li>
+    <li>+ festival experience as an organizer and judge</li>
+    </ul>
+
+{/block:Posts}
+
+
+        {block:PermalinkPage}
+          {block:PostNotes}
+            {PostNotes}
+          {/block:PostNotes}
+        {/block:PermalinkPage}
+        </div>
+            
+            <div class="navigation">
+                        {block:PreviousPage}<span><a href="{PreviousPage}">&#8249; newer</a></span>{/block:PreviousPage}
+                        {block:NextPage}<span><a href="{NextPage}">older &#8250;</a></span>{/block:NextPage}
+        </div>
+        </div>
+        <div class="clear"></div>
+                
+        <!-- Footer -->
+        <div id="footer">
+                {Description}
+<ul id="footer">
+<li>copyright mmvii - mmxiii &nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsplayout a combination of <a href="http://matt.cc">matt mcinerney's</a> <a href="http://hasaportfolio.com">hasaportfolio</a>, <a href="http://sparo.us">sparo's</a> "clean read," and <a href="http://hunsonisgroovy.com">hunsonisgroovy's</a> "black and blue eyes"</li>
+</ul>
+</div>
+</div>
+</div>
+    </body>
+</html>
